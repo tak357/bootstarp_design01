@@ -1,3 +1,4 @@
+// 一文字ずつ分割（サロゲートペア文字列）を考慮
 var a = "🌕には𩸽".match(/[\uD800-\uDBFF][\uDC00-\uDFFF]|[\s\S]/g) || []
 console.log(a);
 
