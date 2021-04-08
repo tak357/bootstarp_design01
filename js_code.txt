@@ -1,5 +1,5 @@
 var test = "🌕には𩸽".trim();
-// 一文字ずつ分割（サロゲートペア文字列：4バイト文字[\uD800-\uDBFF][\uDC00-\uDFFF]）を考慮。空の場合は配列を代入。
+// 一文字ずつ分割（サロゲートペア文字列（4バイト文字列[\uD800-\uDBFF][\uDC00-\uDFFF]））を考慮。空の場合は配列を代入。
 var a = test.match(/[\uD800-\uDBFF][\uDC00-\uDFFF]|[\s\S]/g) || []
 console.log(a);
 
